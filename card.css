@@ -3,7 +3,7 @@
         transform: translate(-50%, -50%) translateX(0) translateY(0);
     }
     to {
-        transform: translate(-50%, -50%) translateX(500px) translateY(-250px);
+        transform: translate(-50%, -50%) translateX(500px) translateY(200px);
     }
     
 }
@@ -22,7 +22,7 @@
         transform: translate(-50%, -50%) translateX(0) translateY(0);
     }
     to {
-        transform: translate(-50%, -50%) translateX(-500px) translateY(-250px);
+        transform: translate(-50%, -50%) translateX(-500px) translateY(200px);
     }
     
 }
