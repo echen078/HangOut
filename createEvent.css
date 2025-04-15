@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5b7ce; /* Light pink background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* For positioning buttons inside the container */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #008080; /* Teal for headings */
+}
+
+.page {
+    display: none;
+    position: relative; /* For positioning buttons */
+}
+
+.page:first-child {
+    display: block;
+}
+
+button {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Style for navigation buttons */
+.next-btn, .prev-btn {
+    background-color: #add8e6; /* Light blue */
+    color: #ffffff;
+    position: absolute;
+    bottom: 20px;
+}
+
+.next-btn {
+    right: 20px; /* Position "Next" button in the bottom-right corner */
+}
+
+.prev-btn {
+    left: 20px; /* Position "Previous" button in the bottom-left corner */
+}
+
+.next-btn:hover, .prev-btn:hover {
+    background-color: #008080; /* Teal */
+}
+
+/* Style for the Submit button */
+.submit-btn {
+    /*background-color: #f2baa3; /* Peach */
+    /*color: #000000;*/
+    position: absolute;
+    bottom: 20px;
+    right: 20px; /* Position "Submit" button in the bottom-right corner */
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    /*background-color: #008080; /* Teal on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Style for choice buttons */
+.choices {
+    display: flex;
+    flex-direction: column; /* Stack choices vertically */
+    align-items: center; /* Center align the buttons */
+    margin: 20px 0;
+}
+
+.choice-btn {
+    padding: 12px 20px;
+    margin: 10px 0; /* Add vertical spacing between buttons */
+    background-color: #f2baa3; /* Peach */
+    color: #ffffff;
+    border: 2px solid #c0c0c0; /* Silver border */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    width: 80%; /* Make buttons wider */
+    text-align: center;
+}
+
+.choice-btn:hover {
+    background-color: #008080; /* Teal on hover */
+    color: #ffffff;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.choice-btn.selected {
+    background-color: #add8e6; /* Light blue for selected */
+    color: #ffffff;
+    border-color: #008080; /* Teal border for selected */
+}
+
+/* Output section styling */
+#output {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f2baa3; /* Peach background */
+    color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Progress bar container */
+.progress-container {
+    width: 100%;
+    background-color: #c0c0c0; /* Silver background */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+
+/* Progress bar */
+.progress-bar {
+    width: 0%; /* Start with 0% progress */
+    height: 100%;
+    background-color: #008080; /* Teal for progress */
+    transition: width 0.3s ease; /* Smooth transition */
+}
