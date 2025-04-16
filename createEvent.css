@@ -152,3 +152,127 @@ button:hover {
     background-color: #008080; /* Teal for progress */
     transition: width 0.3s ease; /* Smooth transition */
 }
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+  /* Customize the label (the container) */
+.labels {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .labels input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .labels:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .labels input:checked ~ .checkmark {
+    background-color: #f2baa3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .labels input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .labels .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+input[type="range"] {
+    margin-left: 90px;
+    width: 450px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #f2baa3;
+    border-radius: 8px;
+    height: 8px;
+  }
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    background: #008080;
+    cursor: pointer;
+    margin-top: -4px;
+  }
+
+.range-labels {
+    list-style: none;
+    li {
+        position: relative;
+        float: left;
+        text-align: center;
+        color: #b2b2b2;
+        width: 110px;
+        font-size: 14px;
+        cursor: pointer;
+
+        &::before {
+            display:none;
+        }
+    }
+
+    .active {
+        color: #008080;
+    }
+}
