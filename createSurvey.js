@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // Set track style
       for (let i = 0; i < prefs.length; i++) {
-        style += `.range input::-${prefs[i]} { background: linear-gradient(to right, #F2BAA3 0%, #F2BAA3 ${val}%, #b2b2b2 ${val}%, #b2b2b2 100%); }\n`;
+        style += `.range input::-${prefs[i]} { background: linear-gradient(to right, #E9967A 0%, #E9967A ${val}%, #EEE ${val}%, #EEE 100%); }\n`;
       }
   
       return style;

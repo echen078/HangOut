@@ -1,14 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5b7ce; /* Light pink background */
+    background-color: #ffffff; /* White background */
     margin: 0;
     padding: 0;
 }
 
 .container {
     max-width: 600px;
-    margin: 50px auto;
-    background: #ffffff; /* White background for the form */
+    margin: 40px auto;
+    background: #FFD9CC; /* Peach background for the form */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -17,7 +17,12 @@ body {
 
 h1, h2 {
     text-align: center;
-    color: #008080; /* Teal for headings */
+    color: #315F72; /* Teal for headings */
+}
+
+h1{
+    margin-top: 50px;
+    font-size: 40px;
 }
 
 .page {
@@ -47,7 +52,7 @@ button:hover {
 
 /* Style for navigation buttons */
 .next-btn, .prev-btn {
-    background-color: #add8e6; /* Light blue */
+    background-color: #008080; /* Teal */
     color: #ffffff;
     position: absolute;
     bottom: 20px;
@@ -62,13 +67,13 @@ button:hover {
 }
 
 .next-btn:hover, .prev-btn:hover {
-    background-color: #008080; /* Teal */
+    background-color: #add8e6; /* Light blue */
 }
 
 /* Style for the Submit button */
 .submit-btn {
-    /*background-color: #f2baa3; /* Peach */
-    /*color: #000000;*/
+    background-color: #008080; /* Peach */
+    color: #FFFFFF;
     position: absolute;
     bottom: 20px;
     right: 20px; /* Position "Submit" button in the bottom-right corner */
@@ -82,7 +87,7 @@ button:hover {
 }
 
 .submit-btn:hover {
-    /*background-color: #008080; /* Teal on hover */
+    background-color: #add8e6; /* Teal on hover */
     transform: scale(1.05); /* Slight zoom effect */
 }
 
@@ -97,9 +102,9 @@ button:hover {
 .choice-btn {
     padding: 12px 20px;
     margin: 10px 0; /* Add vertical spacing between buttons */
-    background-color: #f2baa3; /* Peach */
+    background-color: #E9967A; /* Dark peach */
     color: #ffffff;
-    border: 2px solid #c0c0c0; /* Silver border */
+    border: 2px solid #94472C; /* Brown */
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
@@ -110,22 +115,23 @@ button:hover {
 }
 
 .choice-btn:hover {
-    background-color: #008080; /* Teal on hover */
+    background-color: #add8e6; /* light blue on hover */
+    border-color: #008080;
     color: #ffffff;
     transform: scale(1.05); /* Slight zoom effect */
 }
 
 .choice-btn.selected {
-    background-color: #add8e6; /* Light blue for selected */
+    background-color: #008080; /* Teal for selected */
     color: #ffffff;
-    border-color: #008080; /* Teal border for selected */
+    border-color: #315F72; /* Dark teal border for selected */
 }
 
 /* Output section styling */
 #output {
     margin-top: 20px;
     padding: 15px;
-    background: #f2baa3; /* Peach background */
+    background: #E9967A; /* Dark peach background */
     color: #ffffff;
     border-radius: 8px;
     text-align: center;
@@ -138,7 +144,7 @@ button:hover {
 /* Progress bar container */
 .progress-container {
     width: 100%;
-    background-color: #c0c0c0; /* Silver background */
+    background-color: #d0d0d0; /* Silver background */
     border-radius: 8px;
     margin-bottom: 20px;
     height: 20px;
@@ -149,7 +155,7 @@ button:hover {
 .progress-bar {
     width: 0%; /* Start with 0% progress */
     height: 100%;
-    background-color: #008080; /* Teal for progress */
+    background-color: #E9967A; /* Dark peach for progress */
     transition: width 0.3s ease; /* Smooth transition */
 }
 
@@ -159,6 +165,7 @@ input[type=number] {
     margin: 8px 0;
     box-sizing: border-box;
     border-radius: 8px;
+    border: none;
 }
 
   /* Customize the label (the container) */
@@ -168,7 +175,8 @@ input[type=number] {
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
+    color:#315F72;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -201,7 +209,7 @@ input[type=number] {
   
   /* When the checkbox is checked, add a blue background */
   .labels input:checked ~ .checkmark {
-    background-color: #f2baa3;
+    background-color: #E9967A;
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -240,14 +248,14 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-    background: #f2baa3;
+    background: #E9967A;
     border-radius: 8px;
     height: 8px;
   }
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    border: 1px solid #000000;
+    border: 1px solid #315F72;
     height: 16px;
     width: 16px;
     border-radius: 8px;
@@ -262,7 +270,7 @@ input[type=range]::-webkit-slider-thumb {
         position: relative;
         float: left;
         text-align: center;
-        color: #b2b2b2;
+        color: #E9967A;
         width: 110px;
         font-size: 14px;
         cursor: pointer;
