@@ -41,3 +41,66 @@ document.addEventListener('DOMContentLoaded', function () {
     // Init once at load
     $rangeInput.dispatchEvent(new Event('input'));
   });
+
+  let form = document.getElementById("newGroupForm");
+  form.addEventListener("submit", (e) => {
+    const options = [
+      { name: "Picnic", maxPeople: 10, minPrice: 10, potActive: false, potRestful: true, potOut: true, potStayin: true},
+      { name: "Sports", maxPeople: 20, minPrice: 0, potActive: true, potRestful: false, potOut: true, potStayin: false },
+      { name: "Movies", maxPeople: 20, minPrice: 10, potActive: false, potRestful: true, potOut: true, potStayin: true },
+      { name: "Food", maxPeople: 15, minPrice: 10, potActive: false, potRestful: true, potOut: true, potStayin: true }
+    ];
+
+    e.preventDefault();
+    
+    const numPeople = document.getElementById("num-people").value;
+    const price = document.getElementById("prices").value;
+    const active = document.getElementById("option1").checked;
+    const restful = document.getElementById("option2").checked;
+    const out = document.getElementById("option3").checked;
+    const stayin = document.getElementById("option4").checked;
+    form.style.display = 'none';
+
+    var finalPrice = 100000;
+    if(price == 1) {finalPrice = 0;} 
+    else if(price == 2){finalPrice = 10;}
+    else if(price == 3) {finalPrice = 30;}
+    else if(price == 4) {finalPrice = 50;}
+
+    const potential = options;
+    for(var i = options.length - 1; i >= 0; i--) {
+      if(options[i].maxPeople < numPeople) {
+        potential.splice(i, 1);
+      } else if(options[i].minPrice > price) {
+        potential.splice(i, 1);
+      } else if(options[i].potActive != active) {
+        potential.splice(i, 1);
+      } else if(options[i].potRestful != restful) {
+        potential.splice(i, 1);
+      } else if(options[i].potOut != out) {
+        potential.splice(i, 1);
+      } else if(options[i].potStayin != stayin) {
+        potential.splice(i, 1);
+      }
+    }
+
+    var finalPot = "";
+    for(var i = 0; i < potential.length; i++) {
+      finalPot = finalPot + potential[i].name;
+      finalPot += " ";
+    }
+
+    let container = document.getElementById("container");
+    let newText = `<p>The number of people is: ${numPeople}</p>
+    <p>The price is: ${finalPrice}</p>
+    <p>${active ? "active!" : ""}</p>
+    <p>${restful ? "restful!" : ""}</p>
+    <p>${out ? "going out!" : ""}</p>
+    <p>${stayin ? "staying in!" : ""}</p>
+    <p>Final options: ${finalPot}</p>`;
+
+    let newThing = document.createElement("div");
+    newThing.innerHTML = newText;
+    container.appendChild(newThing);
+
+  });

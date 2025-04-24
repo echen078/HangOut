@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Create a Group</h1>
-    <div class="container">
+    <div class="container" id="container">
         <form id="newGroupForm">
             <div class="page" id="createGroup">
                 <h2>Number of people?</h2>
@@ -18,9 +18,8 @@
                 <h2>Price range?</h2>
                 <div class="question">
                     <div class="range">
-                        <input type="range" min="1" max="5" step="1" value="1">
+                        <input id="prices" type="range" min="1" max="5" step="1" value="1">
                     </div>
-                      
                     <ul class="range-labels">
                         <li class="active selected">Free</li>
                         <li>Less than $10</li>
@@ -29,21 +28,24 @@
                         <li>Don't care</li>
                     </ul>
                 </div> <br>
-                <h2>Have an idea?</h2>
-                <div class="question">
-                    
-                    <label class="labels">Eating food
-                        <input type="checkbox" id="option1" name="option1" value="food">
+                <h2>What are the potential vibes?</h2>
+                <div class="question"> 
+                    <label class="labels">Active
+                        <input type="checkbox" id="option1" name="option1" value="active">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="labels">Watching a movie
-                        <input type="checkbox" id="option2" name="option2" value="movie">
+                    <label class="labels">Restful
+                        <input type="checkbox" id="option2" name="option2" value="restful">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="labels">Going shopping
-                        <input type="checkbox" id="option3" name="option3" value="shopping">
+                    <label class="labels">Going out
+                        <input type="checkbox" id="option3" name="option3" value="out">
                         <span class="checkmark"></span>
-                    </label> <br><br><br><br><br>
+                    </label> 
+                    <label class="labels">Staying in 
+                        <input type="checkbox" id="option4" name="option4" value="in">
+                        <span class="checkmark"></span>
+                    </label><br><br><br><br><br>
                 </div>
                 <button type="submit" class="submit-btn">Create</button>
             </div>
