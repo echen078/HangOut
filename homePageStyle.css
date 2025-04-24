@@ -31,13 +31,34 @@ body {
     background-size: cover;  /* Ensure the image covers the box */
     background-position: center;  /* Center the image */
   }
+
+  .top-right-button {
+    position: absolute;
+    text-align: center;
+    top: 40px;
+    right: 30px;
+    background-color: #315F72;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+    z-index: 999;
+  }
+  
+  .top-right-button:hover {
+    background-color: #223f4d;
+  }
   
 .sports {
     background-image: url('https://www.coachup.com/nation/wp-content/uploads/2022/03/AdobeStock_4437974-scaled.jpeg'); /* Replace with your sports image */
 }
 
 .food {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRYQIOsl5L6namfbnmAuHDY-Y5FyuBIqPIKA&s');  /* Replace with your food image */
+    background-image: url('https://marketplace.canva.com/EAGQVVxP4eE/1/0/1067w/canva-modern-aesthetic-food-mood-photo-collage-Qp_08euoLaQ.jpg');  /* Replace with your food image */
 }
 
 .movies {
@@ -53,7 +74,58 @@ body {
 }
 
 .concert {
-    background-image: url('https://snworksceo.imgix.net/dpn-34s/d1c51649-cd92-4a82-859e-dba7687262b2.sized-1000x1000.jpeg?w=1000');
+    background-image: url('https://images.stockcake.com/public/d/2/a/d2add11a-d1d7-44cd-aacf-bdf4f229ee72_large/vibrant-concert-night-stockcake.jpg');
+}
+
+.party{
+  background-image: url('https://snworksceo.imgix.net/dpn-34s/d1c51649-cd92-4a82-859e-dba7687262b2.sized-1000x1000.jpeg?w=1000');
+}
+
+.beach{
+  background-image: url('https://www.fabmood.com/wp-content/uploads/2023/07/beach-aesthetic-16.jpg');
+}
+
+.museum{
+  background-image: url('https://i.pinimg.com/736x/76/96/78/7696782ff2a24bf2d0b32f9c450d773d.jpg');
+}
+
+.picnic{
+  background-image: url('https://d2fzf9bbqh0om5.cloudfront.net/images/18632/original/how-to-create-a-cottagecore-picnic-that-matches-your-outfit.jpeg?1702039439');
+}
+
+.bicycling{
+  background-image: url('https://media.istockphoto.com/id/961944926/photo/back-view-of-couple-cyclists-standing-with-bicycles-and-enjoying-the-sunset.jpg?s=170667a&w=0&k=20&c=TK_lWCkYUi9zDSbZjDPxKUaTfqmRUgh1EK56aYncpiA=');
+}
+
+.nationalparks{
+  background-image: url('https://hips.hearstapps.com/hmg-prod/images/inside-mesa-arch-at-sunrise-royalty-free-image-1671230031.jpg');
+}
+
+.dessertRun{
+  background-image: url('https://hips.hearstapps.com/hmg-prod/images/types-of-doughnuts-1666119864.jpg?crop=0.666xw:1.00xh;0.168xw,0&resize=1200:*');
+}
+.hiking{
+  background-image: url('https://i.pinimg.com/736x/8b/b0/75/8bb07528f5c9244a2b7603cfd77fa69f.jpg');
+}
+
+.zoo{
+  background-image: url('https://lazoo.org/wp-content/uploads/2023/06/Zoo-Camp-Giraffes-JEP_3389.jpg');
+}
+
+.off-roading{
+  background-image: url('https://can-am.brp.com/content/dam/brp-world/our-products/off-road/my22/photos/lifestyle1/blog/ORV-SSV-MY21-Web-article-apr21-performance-Maverick-X3-Max-RS-OA-2500x1667.jpg');
+}
+
+.trampoline-park{
+  background-image: url('https://creo-interactive.com/wp-content/uploads/2024/11/Trampoline_Park_in_Gurgaon_.jpeg');
+}
+
+.horsebackriding{
+  background-image: url('https://images.tpn.to/ke/nn/ih/ik/content.jpg');
+}
+
+.amusementpark{
+  background-image: url('https://www.familytravelmagazine.com/wp-content/uploads/2023/05/pixarpiercover.jpg');
 }
 
 /* Hover effect for event boxes */
@@ -73,4 +145,10 @@ body {
     .grid-container {
       grid-template-columns: 1fr;
     }
+
+}
+
+a{
+  margin: 0;
+  text-decoration: none;  
 }
