@@ -45,6 +45,15 @@
     }
 }
 
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
 .box-wrapper {
     position: fixed;
     left: 50%;
