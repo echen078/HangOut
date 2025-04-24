@@ -37,7 +37,7 @@ window.onload = function() {
 
             outer_card.removeAttribute("id");
             inner_card.removeAttribute("id");
-
+            
             var new_card = document.createElement("div");
             var inner_new_card = document.createElement("div");
 
