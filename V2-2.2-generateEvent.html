@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Page Questionnaire</title>
+    <link rel="stylesheet" href="2.2-generateEvent.css">
+    
+</head>
+<body>
+    <h1>New Hangout</h1>
+    <div class="container">
+        <form id="questionnaireForm">
+            <!-- Page 1 -->
+            <div class="page" id="page1">
+                <h2>How are you feeling today?</h2>
+                <div class="choices">
+                    <button type="button" class="choice-btn" data-value="Chill and relaxed">Chill and relaxed</button><br>
+                    <button type="button" class="choice-btn" data-value="Kinda restless and bored">Kinda restless and bored</button><br>
+                    <button type="button" class="choice-btn" data-value="Low energy">Low energy</button><br>
+                    <button type="button" class="choice-btn" data-value="Curious and motivated">Curious and motivated</button><br><br><br><br><br>
+                </div>
+                <input type="hidden" id="feeling" name="feeling" required>
+                <button type="button" class="next-btn" data-next="page2">Next</button>
+            </div>
+
+            <!-- Page 2 -->
+            <div class="page" id="page2">
+                <h2>Would you rather:</h2>
+                <div class="choices">
+                    <button type="button" class="choice-btn" data-value="Move your body">Move your body</button><br>
+                    <button type="button" class="choice-btn" data-value="User your brain">User your brain</button><br>
+                    <button type="button" class="choice-btn" data-value="Make something">Make something</button><br>
+                    <button type="button" class="choice-btn" data-value="Rest">Rest</button><br><br><br><br><br>
+                </div>
+                <input type="hidden" id="preferences" name="preferences" required>
+                <button type="button" class="prev-btn" data-prev="page1">Previous</button>
+                <button type="button" class="next-btn" data-next="page3">Next</button>
+            </div>
+
+            <!-- Page 3 -->
+            <div class="page" id="page3">
+                <h2>How long do you have to do this activity?</h2>
+                <div class="choices">
+                    <button type="button" class="choice-btn" data-value="Less than 30 min">Less than 30 min</button><br>
+                    <button type="button" class="choice-btn" data-value="1-2hrs">1-2hrs</button><br>
+                    <button type="button" class="choice-btn" data-value="2-4hrs">2-4hrs</button><br>
+                    <button type="button" class="choice-btn" data-value="Whole day">Whole day</button><br>
+                    <button type="button" class="choice-btn" data-value="Not sure - let's see where it goes">Not sure - let's see where it goes</button><br><br><br><br><br>
+                </div>
+                <input type="hidden" id="time" name="time" required>
+                <button type="button" class="prev-btn" data-prev="page2">Previous</button>
+                <button type="button" class="next-btn" data-next="page4">Next</button>
+            </div>
+
+            <!-- Page 4 -->
+            <div class="page" id="page4">
+                <h2>Indoors or Outdoors?</h2>
+                <div class="choices">
+                    <button type="button" class="choice-btn" data-value="Indoors">Indoors</button><br>
+                    <button type="button" class="choice-btn" data-value="Outdoors">Outdoors</button><br>
+                    <button type="button" class="choice-btn" data-value="Either, depending on the activity">Either, depending on the activity</button><br><br><br><br><br>
+                </div>
+                <input type="hidden" id="where" name="where" required>
+                <button type="button" class="prev-btn" data-prev="page3">Previous</button>
+                <button type="button" class="next-btn" data-next="page5">Next</button>
+            </div>
+
+            <!-- Page 5 -->
+            <div class="page" id="page5">
+                <h2>Do you want to be alone or with others?</h2>
+                <div class="choices">
+                    <button type="button" class="choice-btn" data-value="Alone">Alone</button><br>
+                    <button type="button" class="choice-btn" data-value="With friends/people">With friends/people</button><br>
+                    <button type="button" class="choice-btn" data-value="Good with either">Good with either</button><br><br><br><br><br>
+                </div>
+                <input type="hidden" id="people" name="people" required>
+                <button type="button" class="prev-btn" data-prev="page4">Previous</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+
+            <!-- Add this inside the container, above the form -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script src="V2-2.2-generateEvent.js"></script>
+</body>
+</html>

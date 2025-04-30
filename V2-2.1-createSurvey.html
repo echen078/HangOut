@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="2.2-generateEvent.css">
+    <title>Create a Group</title>
+</head>
+<body>
+    <h1>Create a Group</h1>
+    <div class="container" id="container">
+        <form id="newGroupForm">
+            <div class="page" id="createGroup">
+                <h2>Number of people?</h2>
+                <div class="question">
+                    <input type="number" id="num-people" name="num-people" required> 
+                </div>
+                <h2>Price range?</h2>
+                <div class="question">
+                    <div class="range">
+                        <input id="prices" type="range" min="1" max="5" step="1" value="1">
+                    </div>
+                    <ul class="range-labels">
+                        <li class="active selected">Free</li>
+                        <li>Less than $10</li>
+                        <li>less than $30</li>
+                        <li>less than $50</li>
+                        <li>Don't care</li>
+                    </ul>
+                </div> <br>
+                <h2>What are the potential vibes?</h2>
+                <div class="question"> 
+                    <label class="labels">Active
+                        <input type="checkbox" id="option1" name="option1" value="active">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="labels">Restful
+                        <input type="checkbox" id="option2" name="option2" value="restful">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="labels">Going out
+                        <input type="checkbox" id="option3" name="option3" value="out">
+                        <span class="checkmark"></span>
+                    </label> 
+                    <label class="labels">Staying in 
+                        <input type="checkbox" id="option4" name="option4" value="in">
+                        <span class="checkmark"></span>
+                    </label><br><br><br><br><br>
+                </div>
+                <button type="submit" class="submit-btn">Create</button>
+            </div>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script src="V2-2.1-createSurvey.js"></script>
+</body>
+</html>
