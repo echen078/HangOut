@@ -33,7 +33,7 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
     document.getElementById('questionnaireForm').style.display = 'none';
 
     // ✅ Redirect to 3-card.html
-    window.location.href = '3-card.html';
+    window.location.href = 'V2-2.1-createSurvey.html';
 });
 
 
