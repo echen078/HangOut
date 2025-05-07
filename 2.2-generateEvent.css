@@ -34,6 +34,16 @@ h1{
     display: block;
 }
 
+a{
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.continue{
+    padding: 12px;
+}
+
 button {
     display: inline-block;
     margin: 10px 5px;
@@ -44,6 +54,7 @@ button {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    background-color: #008080;
 }
 
 button:hover {
