@@ -1,3 +1,28 @@
+// Handle navigation between pages
+document.querySelectorAll('.next-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const currentPage = button.closest('.page');
+        const nextPageId = button.getAttribute('data-next');
+        const nextPage = document.getElementById(nextPageId);
+
+        // Hide the current page and show the next page
+        currentPage.style.display = 'none';
+        nextPage.style.display = 'block';
+    });
+});
+
+document.querySelectorAll('.prev-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const currentPage = button.closest('.page');
+        const prevPageId = button.getAttribute('data-prev');
+        const prevPage = document.getElementById(prevPageId);
+
+        // Hide the current page and show the previous page
+        currentPage.style.display = 'none';
+        prevPage.style.display = 'block';
+    });
+});
+
 document.getElementById('questionnaireForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -33,34 +58,11 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
     document.getElementById('questionnaireForm').style.display = 'none';
 
     // ✅ Redirect to 3-card.html
-    window.location.href = 'V2-2.1-createSurvey.html';
+    //window.location.href = 'V2-2.1-createSurvey.html';
 });
 
 
-// Handle navigation between pages
-document.querySelectorAll('.next-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const currentPage = button.closest('.page');
-        const nextPageId = button.getAttribute('data-next');
-        const nextPage = document.getElementById(nextPageId);
-
-        // Hide the current page and show the next page
-        currentPage.style.display = 'none';
-        nextPage.style.display = 'block';
-    });
-});
-
-document.querySelectorAll('.prev-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const currentPage = button.closest('.page');
-        const prevPageId = button.getAttribute('data-prev');
-        const prevPage = document.getElementById(prevPageId);
-
-        // Hide the current page and show the previous page
-        currentPage.style.display = 'none';
-        prevPage.style.display = 'block';
-    });
-});
+/*
 
 // Handle form submission
 document.getElementById('questionnaireForm').addEventListener('submit', function(event) {
@@ -90,6 +92,8 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
     // Hide the form after submission
     document.getElementById('questionnaireForm').style.display = 'none';
 });
+
+*/
 
 // Handle choice button selection
 document.querySelectorAll('.choice-btn').forEach(button => {
