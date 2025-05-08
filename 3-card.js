@@ -1,9 +1,30 @@
 window.onload = function() {
 
 
-    outer_card = document.getElementById("outer-card");
-    inner_card = document.getElementById("inner-card");
+    var outer_card = document.getElementById("outer-card");
+    var inner_card = document.getElementById("inner-card");
+    var prompts = document.getElementById("prompt");
+
+    var foodCuisines = new Map([
+        ["American", ["Burgers & Sandwiches", "Barbecue & Southern Classics", "Breakfast Favorites", "Regional Specialties"]],
+
+        ["South American", ["Columbian", "Brazilian", "Argentinian", "Mexican", "Latin"]],
+
+        ["Asian", ["Japanese", "Korean", "Chinese", "Malaysian", "Indonesian", "Vietnamese", "Thai", "Indian", "Pakistani"]],
+
+        ["African", ["Nigerian", "South African", "Moroccan"]],
+
+        ["European", ["French", "Italian", "Russian", "Spanish", "German", "Mediterranean", "Polish"]],
+        
+        ["Middle Eastern", ["Greek", "Persian", "Turkish", "Levantine", "Egyptian"]]
+    ])
+       
     
+    // START: Select random food cuisine 
+    var random_index = Math.floor(Math.random() * foodCuisines.size);
+    prompts.innerHTML = Array.from(foodCuisines.keys())[random_index]
+    foodCuisines.delete(Array.from(foodCuisines.keys())[random_index])
+
 
     document.addEventListener("keydown", (e) => {
         
@@ -18,16 +39,28 @@ window.onload = function() {
 
             var new_card = document.createElement("div");
             var inner_new_card = document.createElement("div");
+            var new_prompt = document.createElement("p");
 
             var body = document.querySelector("body");
             body.appendChild(new_card);
             new_card.appendChild(inner_new_card);
+            inner_new_card.appendChild(new_prompt);
+
             inner_new_card.style.animation = "fadeIn 1s ease-in forwards";
+            new_prompt.style.animation = "fadeIn 1s ease-in forwards";
 
             new_card.classList.add("box-wrapper");
             inner_new_card.classList.add("box");
+            new_prompt.classList.add("prompt");
             new_card.id = "outer-card";
             inner_new_card.id = "inner-card";
+
+            random_index = Math.floor(Math.random() * foodCuisines.size);
+            new_prompt.innerHTML = Array.from(foodCuisines.keys())[random_index];
+            foodCuisines.delete(Array.from(foodCuisines.keys())[random_index]);
+            console.log(foodCuisines.size);
+
+
 
         } else if (e.key == 'ArrowRight') {
             var outer_card = document.getElementById("outer-card");
@@ -40,18 +73,36 @@ window.onload = function() {
             
             var new_card = document.createElement("div");
             var inner_new_card = document.createElement("div");
+            var new_prompt = document.createElement("p");
+            inner_new_card.appendChild(new_prompt);
 
             var body = document.querySelector("body");
             body.appendChild(new_card);
             new_card.appendChild(inner_new_card);
+
             inner_new_card.style.animation = "fadeIn 1s ease-in forwards";
+            new_prompt.style.animation = "fadeIn 1s ease-in forwards";
 
             new_card.classList.add("box-wrapper");
             inner_new_card.classList.add("box");
+            new_prompt.classList.add("prompt");
             new_card.id = "outer-card";
             inner_new_card.id = "inner-card";
+
+            /**
+            var food_type_index = Math.floor(Math.random() * Array.from(foodCuisines.keys())[random_index].length);
+            console.log(food_type_index);
+            console.log(foodCuisines.get(Array.from(foodCuisines.keys())[random_index])[food_type_index]);
+            **/
         }
+
         
     });
-    
+
+
+
+
+
+
+
 }
