@@ -5,26 +5,56 @@ window.onload = function() {
     var inner_card = document.getElementById("inner-card");
     var prompts = document.getElementById("prompt");
 
-    var foodCuisines = new Map([
-        ["American", ["Burgers & Sandwiches", "Barbecue & Southern Classics", "Breakfast Favorites", "Regional Specialties"]],
+    // var food = new Map([
+    //     ["American", ["Burgers & Sandwiches", "Barbecue & Southern Classics", "Breakfast Favorites", "Regional Specialties"]],
 
-        ["South American", ["Columbian", "Brazilian", "Argentinian", "Mexican", "Latin"]],
+    //     ["South American", ["Columbian", "Brazilian", "Argentinian", "Mexican", "Latin"]],
 
-        ["Asian", ["Japanese", "Korean", "Chinese", "Malaysian", "Indonesian", "Vietnamese", "Thai", "Indian", "Pakistani"]],
+    //     ["Asian", ["Japanese", "Korean", "Chinese", "Malaysian", "Indonesian", "Vietnamese", "Thai", "Indian", "Pakistani"]],
 
-        ["African", ["Nigerian", "South African", "Moroccan"]],
+    //     ["African", ["Nigerian", "South African", "Moroccan"]],
 
-        ["European", ["French", "Italian", "Russian", "Spanish", "German", "Mediterranean", "Polish"]],
+    //     ["European", ["French", "Italian", "Russian", "Spanish", "German", "Mediterranean", "Polish"]],
         
-        ["Middle Eastern", ["Greek", "Persian", "Turkish", "Levantine", "Egyptian"]]
-    ])
-       
+    //     ["Middle Eastern", ["Greek", "Persian", "Turkish", "Levantine", "Egyptian"]]
+    // ])
     
-    // START: Select random food cuisine 
-    var random_index = Math.floor(Math.random() * foodCuisines.size);
-    prompts.innerHTML = Array.from(foodCuisines.keys())[random_index]
-    foodCuisines.delete(Array.from(foodCuisines.keys())[random_index])
 
+    var food = [
+        {
+            category: "American",
+            cuisines: ["Burgers & Sandwiches", "Barbecue & Southern Classics", "Breakfast Favorites", "Regional Specialties"]
+        },
+        {
+            category: "South American",
+            cuisines: ["Columbian", "Brazilian", "Argentinian", "Mexican", "Latin"]
+        },
+        {
+            category: "Asian",
+            cuisines: ["Japanese", "Korean", "Chinese", "Malaysian", "Indonesian", "Vietnamese", "Thai", "Indian", "Pakistani"]
+        },
+        {
+            category: "African",
+            cuisines: ["Nigerian", "South African", "Moroccan"]
+        },
+        {
+            category: "European",
+            cuisines: ["French", "Italian", "Russian", "Spanish", "German", "Mediterranean", "Polish"]
+        },
+        {
+            category: "Middle Eastern",
+            cuisines: ["Greek", "Persian", "Turkish", "Levantine", "Egyptian"]
+        }
+    ];
+
+
+
+    // START: Select random food cuisine 
+    var random_index = Math.floor(Math.random() * food.length);
+    prompts.innerHTML = food[random_index].category;
+    //food.delete(Array.from(food.keys())[random_index])
+    var food_cuisine;
+    var narrow_food = false;
 
     document.addEventListener("keydown", (e) => {
         
@@ -55,12 +85,16 @@ window.onload = function() {
             new_card.id = "outer-card";
             inner_new_card.id = "inner-card";
 
-            random_index = Math.floor(Math.random() * foodCuisines.size);
-            new_prompt.innerHTML = Array.from(foodCuisines.keys())[random_index];
-            foodCuisines.delete(Array.from(foodCuisines.keys())[random_index]);
-            console.log(foodCuisines.size);
-
-
+            if (narrow_food) {
+                food_cuisine = Math.floor(Math.random() * food[random_index].cuisines.length);
+                console.log(food_cuisine);
+                new_prompt.innerHTML = food[random_index].cuisines[food_cuisine];
+                
+            } else {
+                random_index = Math.floor(Math.random() * food.length);
+                new_prompt.innerHTML = food[random_index].category;
+            }
+            
 
         } else if (e.key == 'ArrowRight') {
             var outer_card = document.getElementById("outer-card");
@@ -89,11 +123,14 @@ window.onload = function() {
             new_card.id = "outer-card";
             inner_new_card.id = "inner-card";
 
-            /**
-            var food_type_index = Math.floor(Math.random() * Array.from(foodCuisines.keys())[random_index].length);
-            console.log(food_type_index);
-            console.log(foodCuisines.get(Array.from(foodCuisines.keys())[random_index])[food_type_index]);
-            **/
+
+
+
+
+            narrow_food = true;
+            food_cuisine = Math.floor(Math.random() * food[random_index].cuisines.length);
+            console.log(food_cuisine);
+            new_prompt.innerHTML = food[random_index].cuisines[food_cuisine];
         }
 
         
