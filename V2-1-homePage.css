@@ -13,12 +13,12 @@ body {
 
 .header-bar {
   width: 100%;
-  background: #f8f8f8;
+  background: #e9967a4f;
   padding: 16px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px #be7a637f;
   position: sticky;
   top: 0;
   z-index: 1000;
