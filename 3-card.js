@@ -4,20 +4,8 @@ window.onload = function() {
     var outer_card = document.getElementById("outer-card");
     var inner_card = document.getElementById("inner-card");
     var prompts = document.getElementById("prompt");
+    var image = document.createElement("img");
 
-    // var food = new Map([
-    //     ["American", ["Burgers & Sandwiches", "Barbecue & Southern Classics", "Breakfast Favorites", "Regional Specialties"]],
-
-    //     ["South American", ["Columbian", "Brazilian", "Argentinian", "Mexican", "Latin"]],
-
-    //     ["Asian", ["Japanese", "Korean", "Chinese", "Malaysian", "Indonesian", "Vietnamese", "Thai", "Indian", "Pakistani"]],
-
-    //     ["African", ["Nigerian", "South African", "Moroccan"]],
-
-    //     ["European", ["French", "Italian", "Russian", "Spanish", "German", "Mediterranean", "Polish"]],
-        
-    //     ["Middle Eastern", ["Greek", "Persian", "Turkish", "Levantine", "Egyptian"]]
-    // ])
     
 
     var food = [
@@ -31,7 +19,7 @@ window.onload = function() {
         },
         {
             category: "Asian",
-            cuisines: ["Japanese", "Korean", "Chinese", "Malaysian", "Indonesian", "Vietnamese", "Thai", "Indian", "Pakistani"]
+            cuisines: ["Japanese", "Korean", "Chinese", "Vietnamese", "Thai", "Indian"]
         },
         {
             category: "African",
@@ -52,7 +40,11 @@ window.onload = function() {
     // START: Select random food cuisine 
     var random_index = Math.floor(Math.random() * food.length);
     prompts.innerHTML = food[random_index].category;
-    //food.delete(Array.from(food.keys())[random_index])
+    
+
+
+
+
     var food_cuisine;
     var narrow_food = false;
 
@@ -123,14 +115,16 @@ window.onload = function() {
             new_card.id = "outer-card";
             inner_new_card.id = "inner-card";
 
-
-
-
-
             narrow_food = true;
             food_cuisine = Math.floor(Math.random() * food[random_index].cuisines.length);
             console.log(food_cuisine);
             new_prompt.innerHTML = food[random_index].cuisines[food_cuisine];
+            
+            var new_image = document.createElement("img");
+            new_image.classList.add("image");
+            
+            new_image.setAttribute("src", "./imgs/" + food[random_index].cuisines[food_cuisine] + ".png");
+            inner_new_card.appendChild(new_image);
         }
 
         
