@@ -6,7 +6,7 @@ window.onload = function() {
     var prompts = document.getElementById("prompt");
     var image = document.createElement("img");
 
-    
+    var word_top = "50%";
 
     var food = [
         {
@@ -75,10 +75,12 @@ window.onload = function() {
             new_card.classList.add("box-wrapper");
             inner_new_card.classList.add("box");
             new_prompt.classList.add("prompt");
+            new_prompt.style.top = word_top;
+
             new_card.id = "outer-card";
             inner_new_card.id = "inner-card";
 
-            if (narrow_food) {
+            if (narrow_food && food[random_index].cuisines.length != 0) {
                 food_cuisine = Math.floor(Math.random() * food[random_index].cuisines.length);
                 console.log(food_cuisine);
                 new_prompt.innerHTML = food[random_index].cuisines[food_cuisine];
@@ -91,14 +93,19 @@ window.onload = function() {
 
                 
                 food[random_index].cuisines.splice(food_cuisine, 1);
-                
             } else {
                 random_index = Math.floor(Math.random() * food.length);
                 new_prompt.innerHTML = food[random_index].category;
+                
             }
             
 
         } else if (e.key == 'ArrowRight') {
+
+            count += 1;
+            if (count == 1) {
+                word_top = "80%";
+            }
             var outer_card = document.getElementById("outer-card");
             var inner_card = document.getElementById("inner-card");
             outer_card.style.animation = "slideRight 1s ease-in-out forwards";
@@ -122,11 +129,11 @@ window.onload = function() {
             new_card.classList.add("box-wrapper");
             inner_new_card.classList.add("box");
             new_prompt.classList.add("prompt");
+            new_prompt.style.top = word_top;
             new_card.id = "outer-card";
             inner_new_card.id = "inner-card";
 
             narrow_food = true;
-            count += 1;
             if (count == 1) {
                 food_cuisine = Math.floor(Math.random() * food[random_index].cuisines.length);
                 console.log(food_cuisine);
@@ -137,6 +144,7 @@ window.onload = function() {
                 
                 new_image.setAttribute("src", "./imgs/" + food[random_index].cuisines[food_cuisine] + ".png");
                 inner_new_card.appendChild(new_image);
+                
             }
         }
 
