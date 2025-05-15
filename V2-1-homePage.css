@@ -96,33 +96,35 @@ body {
 
 /* Style for the food event box */
 .event-box.food {
-  background-image: url('./images/food.png');
-}
-
-/* Style for the beach event box */
-.event-box.beach {
-  background-image: url('./images/beach.png');
+  background-image: url('./imgs/burger.png');
 }
 
 /* Style for the museum event box */
-.event-box.museum {
-  background-image: url('./images/museum.png');
+.event-box.creativity {
+  background-image: url('./imgs/creative.png');
 }
 
 /* Style for the movies event box */
-.event-box.movies {
-  background-image: url('./images/movie.png');
+.event-box.entertainment {
+  background-image: url('./imgs/movies.png');
 }
 
 /* Style for the sports event box */
-.event-box.sports {
-  background-image: url('./images/sports.png');
+.event-box.physicalActivity {
+  background-image: url('./imgs/sports.png');
 }
 
-/* Style for the hiking event box */
+/* Style for the beach event box 
+.event-box.beach {
+  background-image: url('./images/beach.png');
+}
+  */
+
+
+/* Style for the hiking event box 
 .event-box.hiking {
   background-image: url('./images/hiking.png');
-}
+}*/
 
 /* Hover effect for event boxes */
 .event-box:hover {
