@@ -88,3 +88,38 @@
     -webkit-user-select: none;
     user-select: none;
 }
+
+
+.image {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+.swipe-instructions-left {
+    position: fixed;
+    left: 20%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 24px;
+    color: black;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.swipe-instructions-right {
+    position: fixed;
+    left: 80%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 24px;
+    color: black;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-user-select: none;
+    user-select: none;
+}
