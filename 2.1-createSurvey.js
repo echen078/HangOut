@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var finalPot = "";
     for(var i = 0; i < potential.length; i++) {
       finalPot = finalPot + potential[i].name;
-      finalPot += " ";
+      finalPot += "<br>";
     }
 
     let container = document.getElementById("container");
-    let newText = `<p>Okay, now let's look at some options!${finalPot}</p> 
+    let newText = `<p>Okay, now let's look at some options! <br><br> ${finalPot}</p> 
     <button class="continue"><a href="./3-card.html">Continue</a></button>`;
 
     let newThing = document.createElement("div");

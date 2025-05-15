@@ -57,8 +57,10 @@ document.getElementById('questionnaireForm').addEventListener('submit', function
     // Hide the form after submission
     document.getElementById('questionnaireForm').style.display = 'none';
 
-    // ✅ Redirect to 3-card.html
-    //window.location.href = 'V2-2.1-createSurvey.html';
+    // ✅ Redirect to theActivity.html after a 2-second delay
+    setTimeout(() => {
+        window.location.href = 'theActivity.html';
+    }, 2000);
 });
 
 
