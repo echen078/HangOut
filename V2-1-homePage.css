@@ -42,6 +42,10 @@ body {
   background-color: #E9967A;
   padding: 20px;
   border: 2.5px solid #315F72;
+  flex-direction: column; /* Stack vertically */
+  align-items: center;    /* Center horizontally */
+  justify-content: center;/* Center vertically (optional) */
+  padding-top: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -58,7 +62,7 @@ body {
   font-weight: bold;
   color: black;
   /* Make text white to contrast with the image */
-  text-shadow: 2px 2px 4px white, -2px -2px 4px white;
+  text-shadow: 2px 2px 4px white, -2px -2px 4px white; 
   /* White outline effect */
   background-size: cover;
   /* Ensure the image covers the box */
@@ -128,10 +132,17 @@ body {
 }
 */
 
+.event-img{
+  width: 80% !important;
+  height: 80% !important;
+  margin: 10px 0 !important; /* Adds space above and below the image */
+  display: block !important;
+}
+
 .event-box img {
   background-size: contain;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 80%;
+  max-height: auto;
   object-fit: contain;
   display: block;
   margin: auto;
@@ -139,7 +150,7 @@ body {
 }
 
 
-.event-box.food {
+/*.event-box.food {
   background-image: url('./imgs/burger.png');
 }
 
@@ -153,7 +164,7 @@ body {
 .event-box.physicalActivity {
   background-image: url('./imgs/sports.png');
 }
-
+*/
 
 /* Style for the food event box */
 .event-box.foods {
