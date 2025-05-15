@@ -7,11 +7,28 @@
 body {
   font-family: Nunito;
   font-weight: bold;
-  background-color: #f4f4f4;
+  background-color: #ffffff62;
   margin: 20px;
 }
 
+.header-bar {
+  width: 100%;
+  background: #f8f8f8;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
+.header-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
 
 .grid-container {
   display: grid;
@@ -52,7 +69,7 @@ body {
 .top-right-button {
   position: absolute;
   text-align: center;
-  top: 40px;
+  top: 100px;
   right: 30px;
   background-color: #315F72;
   color: white;
@@ -65,6 +82,21 @@ body {
   transition: background-color 0.3s;
   z-index: 999;
 }
+
+/* .top-right-button {
+  background-color: #315F72;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  z-index: 1;
+  margin: 0;           
+  margin-left: auto;  
+} */
 
 .top-right-button:hover {
   background-color: #E9967A;
