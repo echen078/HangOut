@@ -15,7 +15,7 @@ window.onload = function() {
         },
         {
             category: "South American",
-            cuisines: ["Columbian", "Brazilian", "Argentinian", "Mexican", "Latin"]
+            cuisines: ["Columbian", "Brazilian", "Argentinian", "Mexican"]
         },
         {
             category: "Asian",
@@ -23,15 +23,15 @@ window.onload = function() {
         },
         {
             category: "African",
-            cuisines: ["Nigerian", "South African", "Moroccan"]
+            cuisines: ["Nigerian", "South African", "Moroccan", "Ghanaian"]
         },
         {
             category: "European",
-            cuisines: ["French", "Italian", "Russian", "Spanish", "German", "Mediterranean", "Polish"]
+            cuisines: ["French", "Italian", "German", "Mediterranean"]
         },
         {
             category: "Middle Eastern",
-            cuisines: ["Greek", "Persian", "Turkish", "Levantine", "Egyptian"]
+            cuisines: ["Persian", "Turkish", "Levantine", "Egyptian"]
         }
     ];
 
@@ -40,9 +40,10 @@ window.onload = function() {
     // START: Select random food cuisine 
     var random_index = Math.floor(Math.random() * food.length);
     prompts.innerHTML = food[random_index].category;
-    
 
 
+
+    count = 0;
 
 
     var food_cuisine;
@@ -82,6 +83,15 @@ window.onload = function() {
                 console.log(food_cuisine);
                 new_prompt.innerHTML = food[random_index].cuisines[food_cuisine];
                 
+                var new_image = document.createElement("img");
+                new_image.classList.add("image");
+                
+                new_image.setAttribute("src", "./imgs/" + food[random_index].cuisines[food_cuisine] + ".png");
+                inner_new_card.appendChild(new_image);
+
+                
+                food[random_index].cuisines.splice(food_cuisine, 1);
+                
             } else {
                 random_index = Math.floor(Math.random() * food.length);
                 new_prompt.innerHTML = food[random_index].category;
@@ -116,15 +126,18 @@ window.onload = function() {
             inner_new_card.id = "inner-card";
 
             narrow_food = true;
-            food_cuisine = Math.floor(Math.random() * food[random_index].cuisines.length);
-            console.log(food_cuisine);
-            new_prompt.innerHTML = food[random_index].cuisines[food_cuisine];
-            
-            var new_image = document.createElement("img");
-            new_image.classList.add("image");
-            
-            new_image.setAttribute("src", "./imgs/" + food[random_index].cuisines[food_cuisine] + ".png");
-            inner_new_card.appendChild(new_image);
+            count += 1;
+            if (count == 1) {
+                food_cuisine = Math.floor(Math.random() * food[random_index].cuisines.length);
+                console.log(food_cuisine);
+                new_prompt.innerHTML = food[random_index].cuisines[food_cuisine];
+                
+                var new_image = document.createElement("img");
+                new_image.classList.add("image");
+                
+                new_image.setAttribute("src", "./imgs/" + food[random_index].cuisines[food_cuisine] + ".png");
+                inner_new_card.appendChild(new_image);
+            }
         }
 
         
