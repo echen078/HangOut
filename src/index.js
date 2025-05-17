@@ -16,7 +16,7 @@ import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
 
-  apiKey: "***REMOVED***",
+  apiKey: "AIzaSyBkMKRKm4840P6ZxrlAOl21oU28FBC0rgc",
 
   authDomain: "acm-hangout-bad1f.firebaseapp.com",
 

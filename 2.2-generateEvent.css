@@ -138,6 +138,24 @@ button:hover {
     border-color: #315F72; /* Dark teal border for selected */
 }
 
+
+.activity-box h3 {
+  margin-bottom: 12px; /* Reduce as needed */
+  text-decoration: underline;
+}
+
+.activity-placeholder {
+  margin: -10; /* Remove extra space if not used */
+  padding: 0;
+  min-height: 0;
+}
+
+.submit-button {
+  margin-top: 0; /* Remove extra space above the button */
+  color: white;
+}
+
+
 /* Output section styling */
 #output {
     margin-top: 20px;
