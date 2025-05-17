@@ -32,8 +32,10 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr);    /* 2 rows */
   gap: 40px;
+  margin: 40px;
 }
 
 
@@ -104,14 +106,6 @@ body {
 
 .top-right-button:hover {
   background-color: #E9967A;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 20px;
-  margin: 40px;
 }
 
 
