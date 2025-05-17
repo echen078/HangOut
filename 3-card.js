@@ -80,6 +80,7 @@ window.onload = function() {
             new_card.id = "outer-card";
             inner_new_card.id = "inner-card";
 
+            
             if (narrow_food && food[random_index].cuisines.length != 0) {
                 food_cuisine = Math.floor(Math.random() * food[random_index].cuisines.length);
                 console.log(food_cuisine);
@@ -96,7 +97,9 @@ window.onload = function() {
             } else {
                 random_index = Math.floor(Math.random() * food.length);
                 new_prompt.innerHTML = food[random_index].category;
-                
+                new_prompt.style.top = "50%";
+                count = 0;
+                narrow_food = false;
             }
             
 
@@ -133,7 +136,7 @@ window.onload = function() {
             new_card.id = "outer-card";
             inner_new_card.id = "inner-card";
 
-            narrow_food = true;
+            
             if (count == 1) {
                 food_cuisine = Math.floor(Math.random() * food[random_index].cuisines.length);
                 console.log(food_cuisine);
@@ -143,9 +146,14 @@ window.onload = function() {
                 new_image.classList.add("image");
                 
                 new_image.setAttribute("src", "./imgs/" + food[random_index].cuisines[food_cuisine] + ".png");
-                inner_new_card.appendChild(new_image);
+                inner_new_card.appendChild(new_image);   
+                narrow_food = true;
+            } else {
+                window.open("https://www.google.com/maps/?entry=wc")
                 
             }
+
+
         }
 
         
