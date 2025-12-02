@@ -32,9 +32,9 @@ Built with React and Firebase, the app focuses on speed, simplicity, and a smoot
 ## 🖼️ Screenshots
 *(Replace placeholders once you upload images)*
 
-| Home | Event View | Voting |
+| Home | Survey | Voting |
 |------|-------------|---------|
-| ![](./screenshots/home.png) | ![](./screenshots/event.png) | ![](./screenshots/vote.png) |
+| ![](./screenshots/Home.png) | ![](./screenshots/survey.png) | ![](./screenshots/swipe.png) |
 
 ---
 
